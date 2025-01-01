@@ -4,11 +4,11 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                def config = {
+                def config = [
                     url : 'https://github.com/Dayashankar28/Jenkins_Pipepline.git',
                     credId : 'gitcred',
                     branch : 'main'
-                }
+                ]
                 gitCheckout(config)
             }
         }
