@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout'){
             steps{
-                sh 'echo Hi'
+                sh 'echo Hi daya'
             }
         }
     }
