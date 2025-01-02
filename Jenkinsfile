@@ -29,7 +29,7 @@ pipeline {
                     gitDockerBuildPush( 
                                         'dockerCredId',
                                         DOCKER_IMAGE_NAME,
-                                        DOCKER_IMAGE_NAME,
+                                        DOCKER_IMAGE_TAG,
                                         DOCKERFILE_PATH,
                                         
                     )
