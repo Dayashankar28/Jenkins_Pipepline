@@ -21,6 +21,15 @@ pipeline {
             }
         }
 
+        stage('Ranju'){
+            steps{
+                sh """
+                exit 1
+                """
+                }
+            }
+        }
+
         stage('Sonar_Scan'){
             steps{
                 script{
