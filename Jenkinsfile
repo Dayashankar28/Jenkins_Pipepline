@@ -12,11 +12,6 @@ pipeline {
                 ]
                 gitCheckout(config)
             }
-
-            sh ' echo hi '
-            sh ' echo Daya '
-            sh ' echo Shankar '
-            sh ' echo Ranju '
             }
         }
     }
