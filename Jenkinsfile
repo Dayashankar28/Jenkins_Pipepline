@@ -21,6 +21,16 @@ pipeline {
             }
         }
 
+        stage('Sonar_Scan'){
+            steps{
+                script{
+                    sh"""
+                    echo Scanning
+                    """
+                }
+            }
+        }
+
         stage('Docker_Build_Push'){
 
             steps{
