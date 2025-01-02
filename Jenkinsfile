@@ -21,12 +21,12 @@ pipeline {
             }
         }
 
-        stage('Ranju'){
+        stage('Dummy_Stage'){
             steps{
                 sh """
+                sleep 10;
                 exit 1
                 """
-                }
             }
         }
 
