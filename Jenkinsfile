@@ -24,9 +24,13 @@ pipeline {
         stage('Sonar_Scan'){
             steps{
                 script{
-                    sh"""
-                    echo Scanning
+                    withSonarQubeEnv('sonar_server') {
+                                        sh """
+                                        /opt/sonar-scanner/bin/sonar-scanner
                     """
+
+                    }
+
                 }
             }
         }
