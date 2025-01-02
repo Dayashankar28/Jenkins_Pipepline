@@ -26,10 +26,12 @@ pipeline {
             steps{
                 script{
 
-                    gitDockerBuildPush( DOCKER_IMAGE_NAME,
+                    gitDockerBuildPush( 
+                                        'dockerCredId',
+                                        DOCKER_IMAGE_NAME,
                                         DOCKER_IMAGE_NAME,
                                         DOCKERFILE_PATH,
-                                        'dockerCredId'
+                                        
                     )
                 }
             }
