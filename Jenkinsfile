@@ -59,5 +59,16 @@ pipeline {
             }
 
         }
+
+        stage('Scan Docker Image with trivey'){
+            steps{
+                script{
+                    gittrivyScan{
+                            DOCKER_IMAGE_NAME,
+                            DOCKER_IMAGE_TAG
+                    }
+                }
+            }
+        }
     }
 }
