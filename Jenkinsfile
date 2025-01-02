@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                 def config = [
-                    url : 'https://github.com/Dayashankar28/Jenkins_Pipepline.git',
+                    url : 'https://github.com/Dayashankar28/Python_Flask_Calculator.git',
                     credId : 'gitcred',
                     branch : 'main'
                 ]
