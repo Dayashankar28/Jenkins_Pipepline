@@ -34,6 +34,14 @@ pipeline {
             }
         }
 
+        stage("Clean_Docker_Images"){
+            steps{
+                script{
+                    sh ''' docker image prune -a -f'''
+                }
+            }
+        }
+
         stage('Docker_Build_Push'){
 
             steps{
