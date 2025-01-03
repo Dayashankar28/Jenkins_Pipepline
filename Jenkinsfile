@@ -79,8 +79,8 @@ pipeline {
                             keepAll: true,
                             reportDir: '.',
                             reportFiles: 'report.html',
-                            reportName: 'My_CICD_Reports',
-                            reportTitles: 'My_CICD_Reports'])
+                            reportName: 'My_Calculator_CICD_Reports',
+                            reportTitles: 'My_Calculator_CICD_Reports'])
         }
     }
 }
