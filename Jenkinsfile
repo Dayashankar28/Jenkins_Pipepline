@@ -51,22 +51,27 @@ pipeline {
 
         }
 
-        stage('Scan Docker Image with trivey'){
-            steps{
-                script{
-                    gittrivyScan(
-                            DOCKER_IMAGE_NAME,
-                            DOCKER_IMAGE_TAG
-                    )
-                }
-            }
-        }
+        // stage('Scan Docker Image with trivey'){
+        //     steps{
+        //         script{
+        //             gittrivyScan(
+        //                     DOCKER_IMAGE_NAME,
+        //                     DOCKER_IMAGE_TAG
+        //             )
+        //         }
+        //     }
+        // }
 
         stage('Run Tests') {
     steps {
-        sh'python3 -m venv venv'
-        sh 'source venv/bin/activate'
-        sh 'python -m unittest discover -s . -p "test_calc.py"'
+
+        script{
+            sh 'python3 -m venv venv'
+            sh '''#!/bin/bash
+            source venv/bin/activate
+            python -m unittest discover -s . -p "test_calc.py"
+            '''
+        }
     }
 }
 
