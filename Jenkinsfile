@@ -20,19 +20,19 @@ pipeline {
             }
             }
         }
-        stage('Sonar_Scan'){
-            steps{
-                script{
-                    withSonarQubeEnv('sonar_server') {
-                                        sh """
-                                        /opt/sonar-scanner/bin/sonar-scanner
-                    """
+        // stage('Sonar_Scan'){
+        //     steps{
+        //         script{
+        //             withSonarQubeEnv('sonar_server') {
+        //                                 sh """
+        //                                 /opt/sonar-scanner/bin/sonar-scanner
+        //             """
 
-                    }
+        //             }
 
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
 
         stage('Docker_Build_Push'){
 
