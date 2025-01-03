@@ -1,4 +1,4 @@
-@Library('myfirstlib') 
+@Library('myfirstlib') _
 pipeline {
     agent any
     environment{
