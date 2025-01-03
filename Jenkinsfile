@@ -1,4 +1,4 @@
-@Library('myfirstlib') _
+@Library('myfirstlib') 
 pipeline {
     agent any
     environment{
@@ -22,7 +22,7 @@ pipeline {
         }
 
         // stage('Dummy_Stage'){
-        //     steps{
+        //     steps{ jhhk
         //         sh """
         //         sleep 10;
         //         """
@@ -71,5 +71,16 @@ pipeline {
             }
         }
     }
+
+    post{
+        alway{
+            publishHTML (target : [allowMissing: false,
+                            alwaysLinkToLastBuild: true,
+                            keepAll: true,
+                            reportDir: '.',
+                            reportFiles: 'report.html',
+                            reportName: 'My_CICD_Reports',
+                            reportTitles: 'My_CICD_Reports'])
+        }
+    }
 }
-//d
