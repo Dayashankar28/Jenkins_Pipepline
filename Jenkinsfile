@@ -72,5 +72,17 @@ pipeline {
         }
     }
 
-    
+    post{
+        always{
+            publishHTML (target : [allowMissing: false,
+                            alwaysLinkToLastBuild: true,
+                            keepAll: true,
+                            reportDir: '.',
+                            reportFiles: 'report.html',
+                            reportName: 'My_Cal_App_Reports',
+                            reportTitles: 'My_Cal_App_Report']
+                        )
+        }
+    }
+
 }
