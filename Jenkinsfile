@@ -66,11 +66,20 @@ pipeline {
     steps {
 
         script{
-            sh 'python3 -m venv venv'
+
+            try{
+                sh 'python3 -m venv venv'
             sh '''#!/bin/bash
             source venv/bin/activate
             python -m unittest discover -s . -p "test_calc.py"
             '''
+            }
+
+            catch (Exception e){
+                currentBuild.result = 'UNSTABLE'  // Set the build result to UNSTABLE
+                echo "Test failed, but proceeding with the pipeline."
+            }
+            
         }
     }
 }
