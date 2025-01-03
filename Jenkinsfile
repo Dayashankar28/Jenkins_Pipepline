@@ -64,6 +64,8 @@ pipeline {
 
         stage('Run Tests') {
     steps {
+        sh'python3 -m venv venv'
+        sh 'source venv/bin/activate'
         sh 'python -m unittest discover -s . -p "test_calc.py"'
     }
 }
