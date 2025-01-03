@@ -96,6 +96,7 @@ pipeline {
                             reportName: 'My_Cal_App_Reports',
                             reportTitles: 'My_Cal_App_Report']
                         )
+            cleanWs()
         }
     }
 
