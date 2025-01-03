@@ -20,15 +20,6 @@ pipeline {
             }
             }
         }
-
-        // stage('Dummy_Stage'){
-        //     steps{ jhhk
-        //         sh """
-        //         sleep 10;
-        //         """
-        //     }
-        // }
-
         // stage('Sonar_Scan'){
         //     steps{
         //         script{
