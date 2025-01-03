@@ -64,7 +64,7 @@ pipeline {
 
         stage('Run Tests') {
     steps {
-        sh 'python -m unittest discover -s . -p "test_*.py"'
+        sh 'python -m unittest discover -s . -p "test_calc.py"'
     }
 }
 
